@@ -1,12 +1,12 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+
 from django.urls import reverse_lazy, reverse
 from django.views import generic
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import EditProfileForm
-
 
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
